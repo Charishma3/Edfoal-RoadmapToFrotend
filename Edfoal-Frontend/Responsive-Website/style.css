@@ -1,0 +1,607 @@
+*{
+    font-family: 'Exo 2', sans-serif;
+    font-style: italic;
+    /*text-transform: uppercase;*/
+    transition: all .2s linear;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top:0;
+    left:0;
+    padding:2rem 3rem;
+    z-index:10;
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header nav ul li{
+    margin: 1rem 1.5rem;
+}
+
+header nav ul li a{
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+    padding: 1rem; 
+}              
+
+header nav ul li a:hover{
+    background-color: #086d22;
+}       
+
+header .fa-bars{
+    font-size: 4rem;
+    color: #086d22;
+    cursor: pointer;
+    margin: 0 2rem;
+    z-index: 20;
+    display: none;
+}
+
+header .logo{
+    margin: 0 1.5rem;
+}
+
+header .logo a{
+   text-decoration: none;
+}
+
+header .logo a h1{
+    font-size: 3rem;
+    color: #fff;
+}
+
+header .logo a h1 span{
+    color: #086d22;
+}
+
+#home{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    background: url(home.jpg), linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    padding-top: 5rem;
+    position: relative;
+    text-align: center;
+}
+
+#home h1{
+    font-size: 9rem;
+    margin: 0 .5rem;
+    color: #fff;
+}
+
+#home h3{
+    font-size: 7rem;
+    color: #086d22;
+    margin: 1rem 0;
+}
+
+#home button{
+    margin: 1rem 0;
+    font-size: 2rem;
+    height: 4rem;
+    width: 14rem;
+    background: transparent;
+    border: 0.2rem solid #086d22;
+    outline: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #086d22;
+    font-weight: bold;
+}
+  
+#home button:hover{
+    background: #086d22;
+    color: #fff;
+}
+
+#home .icons{
+    position: absolute;
+    bottom: 5.5rem;
+    text-align: center;
+    z-index: 1;
+}
+  
+#home .icons a{
+    text-decoration: none;
+    font-size: 3rem;
+    margin: 0 1rem;
+    color: #fff;
+}
+  
+#home .icons a:hover{
+    color: #086d22;
+}
+
+#about{
+    height: auto;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+#about .image{
+    margin: 7rem 15rem;
+}
+
+#about .image img{
+    width: 30rem;
+    height: 45rem;
+}
+
+#about .content{
+    width: 90vw;
+}
+
+#about .content h1{
+    font-size: 4rem;
+    margin: 7rem 0 2rem 0;
+    color: #086d22;
+}
+  
+#about .content p{
+    font-size: 2rem;
+    padding-right: 6rem;
+}
+  
+#about .content .buttons{
+    padding-right: 2rem;
+}
+
+#about .content .buttons button{
+    height: 4rem;
+    width: 14rem;
+    background: transparent;
+    border: 0.2rem solid #086d22;
+    outline: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #086d22;
+    font-weight: bold;
+    margin: 2rem 5rem 1.5rem 0;
+}
+  
+#about .content .buttons button:hover{
+    background: #086d22;
+    color: #fff;
+}
+
+#gallery{
+    display: grid;
+    place-items: center;
+    height: auto;
+    width: 100vw;
+    background: rgb(2, 15, 17);
+}
+  
+#gallery h1{
+    text-align: center;
+    font-size: 6rem;
+    text-decoration: underline;
+    color: #086d22;
+    margin: 6rem 0 3rem 0;
+}
+  
+#gallery .image-container{
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+  
+#gallery .image-container .image{
+    height: 25rem;
+    width: 30rem;
+    margin: 3rem;
+    overflow: hidden;
+    position: relative;
+}
+#gallery .image-container .image p{
+    text-align:center;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    color:#f502b8
+
+}
+#gallery .image-container .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+  
+#gallery .image-container .image .info{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    background: rgba(22, 1, 1, 0.7);
+}
+  
+#gallery .image-container .image .info button{
+    height: 4rem;
+    width: 14rem;
+    background: transparent;
+    border: 0.2rem solid #086d22;
+    outline: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #086d22;
+    font-weight: bold;
+}
+  
+#gallery .image-container .image .info button:hover{
+    background:#086d22;
+    color: #fff;
+}
+  
+#gallery .image-container .image:hover .info{
+    bottom: 0%;
+}
+
+#contact{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+}
+
+#contact form{
+    display: flex;
+    flex-flow: column;
+  }
+  
+#contact form h1{
+    color: #086d22;
+    font-size: 4rem;
+}
+  
+#contact form input{
+    height: 4rem;
+    background: transparent;
+    margin: 2rem 0;
+    padding: 0 1rem;
+    border: 0.2rem solid #086d22;
+    outline: none;
+    color: #fff;
+    font-weight: bold;
+    width: 40vw;
+}
+
+#contact form input::placeholder{
+    color: #086d22;
+}
+  
+#contact form input:focus{
+    background: #086d22;
+}
+  
+#contact form input[type="submit"]{
+    height: 4rem;
+    width: 14rem;
+    background: transparent;
+    border: 0.2rem solid #086d22;
+    outline: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #086d22;
+    font-weight: bold;
+    background: #086d22;
+    color: #fff;
+}
+  
+#contact form input[type="submit"]:hover{
+    background: transparent;
+}
+  
+#contact form textarea{
+    resize: none;
+    background: transparent;
+    outline: none;
+    padding: 1rem;
+    color: #fff;
+    border: 0.2rem solid #086d22;
+    font-weight: bold;
+}
+  
+#contact form textarea::placeholder{
+    color: #086d22;
+}
+  
+#contact form textarea:focus{
+    background: #086d22;
+}
+  
+#contact .image img{
+    height: auto;
+    width: 30vw;
+    margin-top: 4rem;
+}
+
+
+#footer{
+    height: auto;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    background:rgb(0, 0, 0);
+}
+#footer .msg{
+    text-align: center;
+  color: #fff;
+  margin: 2rem 0;
+}
+
+#footer .msg span{
+    color: #086d22;
+
+}
+
+#footer .footer-container{
+  height: auto;
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#footer .brand{
+    margin: 3rem 0;
+    flex: 1 0 25rem;
+}
+
+#footer .logo{
+    margin: 1rem 0;
+}
+#footer .logo a {
+    text-decoration: none;
+  }
+  
+  #footer .logo a h1 {
+    font-size: 3rem;
+    color: #fff;
+  }
+  
+  #footer .logo a h1 span {
+    color: #086d22;
+  }
+#footer .icons{
+    display: flex;
+    flex-flow: column;
+}
+#footer .icons a{
+    text-decoration: none;
+    color: #086d22;
+    font-size: 3rem;
+    margin: .5rem 0;
+    position: relative;
+}
+#footer .icons a::after{
+  content: attr(data-text);
+  position: absolute;
+  top: .8rem;
+  left: 3.5rem;
+  font-family: 'Exo 2',sans-serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  color: #fff;
+}
+#footer .contact-info{
+    flex: 1 0 25rem;
+}
+#footer .info{
+  height: 16rem;
+  width: 5rem;
+  background: #086d22;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: center;
+}
+#footer .contact-info .info a {
+    font-size: 2rem;
+    text-decoration: none;
+    margin: 2rem 0;
+    color: #fff;
+    position: relative;
+}
+#footer .info a::after {
+    content: attr(data-text);
+    position: absolute;
+    top: .5rem;
+    left: 5.5rem;
+    width: 20rem;
+    text-align: left;
+    font-family: 'Exo 2',sans-serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  #footer .letter {
+    flex: 1 0 25rem;
+    margin-top: 1rem;
+  }
+  
+  #footer .letter h1 {
+    font-size: 3rem;
+    color: #086d22;
+  }
+  #footer .letter p {
+    color: #fff;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+  }
+  
+  #footer .letter input {
+    height: 4rem;
+    background: transparent;
+    margin: 1rem 0;
+    padding: 0 1rem;
+    border: 0.2rem solid #086d22;
+    outline: none;
+    color: #fff;
+    font-weight: bold;
+    width: 100%;
+  }
+  #footer .letter input::placeholder {
+    color: #ccc;
+  }
+  
+  #footer .letter input:focus {
+    background: #086d22;
+  }
+  
+  #footer .letter input[type="submit"] {
+    height: 4rem;
+    width: 14rem;
+    background: transparent;
+    border: 0.2rem solid #086d22;
+    outline: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #086d22;
+    font-weight: bold;
+    background: #086d22;
+    color: #fff;
+  }
+  
+  #footer .letter input[type="submit"]:hover {
+    background: #086d22;
+    color: #fff;
+  }
+  
+  #footer .letter input[type="submit"]:hover {
+    background: transparent;
+  }
+ 
+  
+  
+.fa-times{
+    transform: rotateZ(180deg);
+}
+           
+.active{
+    background: #333;
+    box-shadow: 0 .1rem .3rem #000;
+    padding: 1rem;
+}
+
+@media (max-width:991px){
+    html{
+        font-size: 50%;
+    }
+}
+
+@media (max-width:768px){
+    html{
+        font-size: 45%;
+    }
+    #about{
+        flex-flow: column;
+        align-items: center;
+    }
+    #about .image img{
+        width: 70vw;
+    }
+    #about .content{
+        text-align: center;
+    }
+    #about .content p{
+        padding: 2rem;
+    }
+    #about .content .buttons{
+        padding: 0;
+    }
+    #contact .image{
+        display: none;
+    }
+    #contact form input{
+        width: 90vw;
+    }
+}
+
+@media (max-width:620px){
+    header .fa-bars{
+        display: block;
+    }
+    header nav{
+        position: fixed;
+        top: 0;
+        left: -200%;
+        height: 100vh;
+        width: 80vw;
+        background: #fff;
+        box-shadow: 30rem 0 0 rgba(0,0,0,.5);
+    }
+    header nav ul{
+        height: 100%;
+        flex-flow: column;
+        justify-content: center;
+    }
+    header nav ul li{
+      margin: 2rem 0;
+    }
+    header nav ul li a{
+        margin: 0;
+        font-size: 4rem;
+        color: #086d22;
+    }
+    header nav ul li a:hover{
+        background-color: white;
+    }  
+    .nav-toggle{
+        left: 0;
+    }
+    #home h1{
+        font-size: 4.5rem;
+    }
+    #home h3{
+        font-size: 4rem;
+    }
+    #home .icons{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
